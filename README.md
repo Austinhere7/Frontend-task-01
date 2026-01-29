@@ -169,3 +169,149 @@ No. This assignment is only for the hiring process and will not be used commerci
 If you have any additional doubts, feel free to reach out at: `developer@camonk.com`.
 
 Good luck! 🚀
+
+
+
+
+
+
+
+
+
+
+
+
+AFTER COMPLETION (AIMED README)
+
+# CA Monk – Blog Application
+
+A modern blog application built as part of the **CA Monk Frontend Assignment**.  
+The app allows users to view all blogs, read a single blog in detail, and create new blog posts using a mock backend powered by JSON Server.
+
+---
+
+## 🚀 Features
+
+- 📄 View all blogs with title, category, and description
+- 🔍 View detailed blog content by selecting a blog
+- ✍️ Create a new blog post
+- ⚡ Efficient server-state management using TanStack Query
+- 🎨 Clean and responsive UI with Tailwind CSS & shadcn/ui
+- ⏳ Proper loading and error handling states
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** (with **TypeScript**)
+- **TanStack Query** – Server state management & data fetching
+- **Tailwind CSS** – Utility-first styling
+- **shadcn/ui** – Reusable UI components
+- **JSON Server** – Mock backend API
+- **Vite** – Development & build tool
+
+---
+
+## 📁 Project Structure
+
+src/
+├── components/
+│ ├── BlogCard.tsx
+│ ├── BlogList.tsx
+│ ├── BlogDetail.tsx
+│ └── BlogForm.tsx
+├── hooks/
+│ └── useBlogs.ts
+├── pages/
+│ └── Home.tsx
+├── services/
+│ └── api.ts
+├── types/
+│ └── blog.ts
+├── App.tsx
+└── main.tsx
+
+
+---
+
+## 🔌 API Endpoints (JSON Server)
+
+| Method | Endpoint        | Description              |
+|------|-----------------|--------------------------|
+| GET  | `/blogs`        | Get all blogs            |
+| GET  | `/blogs/:id`    | Get blog by ID           |
+| POST | `/blogs`        | Create a new blog        |
+
+### Sample Blog Object
+
+```json
+{
+  "id": 1,
+  "title": "Future of Fintech",
+  "category": ["FINANCE", "TECH"],
+  "description": "Exploring how AI and blockchain are reshaping financial services",
+  "date": "2026-01-11T09:12:45.120Z",
+  "coverImage": "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg",
+  "content": "Full blog content..."
+}
+
+
+⚙️ Installation & Setup
+Prerequisites
+Node.js v18 or higher
+
+
+Steps
+Fork the repository
+
+Clone your fork
+
+git clone <your-forked-repo-url>
+cd camonk-interview
+Install dependencies
+
+npm install
+Start JSON Server
+
+npm run server
+Backend runs at: http://localhost:3001
+
+Start development server
+
+npm run dev
+App runs at: http://localhost:5173
+
+🧠 Implementation Details
+TanStack Query is configured using QueryClientProvider at the app root
+
+Queries are invalidated after creating a new blog to refresh the list
+
+Loading states are handled using skeletons
+
+Error states are handled gracefully with fallback UI
+
+UI components are built using shadcn/ui and styled with Tailwind CSS
+
+Plain text is used for blog content (no HTML formatting)
+
+📱 Responsive Design
+Fully responsive layout
+
+Blog list and blog detail panels adapt to screen size
+
+Optimized for both desktop and mobile views
+
+✅ Evaluation Checklist
+ TanStack Query hooks implemented correctly
+
+ Tailwind CSS styling
+
+ shadcn/ui components used
+
+ TypeScript enforced throughout the app
+
+ Proper folder structure
+
+ Loading and error handling
+
+ Responsive and polished UI
